@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WARNING: NEW WORLD AHEAD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1510;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Special Elite', cursive;
+        }
+
+        /* The "Wanted Poster" Container */
+        .poster {
+            background-color: #e5d3b3;
+            width: 380px;
+            padding: 40px;
+            border: 15px solid #3d2b1f;
+            box-shadow: 0 0 50px rgba(0,0,0,0.8), inset 0 0 100px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            transform: rotate(-1deg);
+        }
+
+        /* Weathered edge effect */
+        .poster::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(45deg, rgba(0,0,0,0.05) 25%, transparent 25%),
+                        linear-gradient(-45deg, rgba(0,0,0,0.05) 25%, transparent 25%);
+            pointer-events: none;
+        }
+
+        .header {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 70px;
+            color: #3d2b1f;
+            letter-spacing: 10px;
+            margin: 0;
+            line-height: 0.8;
+        }
+
+        .jolly-roger {
+            font-size: 80px;
+            margin: 20px 0;
+            filter: sepia(1) saturate(2);
+        }
+
+        .warning-text {
+            color: #5c4033;
+            font-size: 18px;
+            font-weight: bold;
+            border-top: 2px solid #3d2b1f;
+            border-bottom: 2px solid #3d2b1f;
+            padding: 15px 0;
+            margin: 20px 0;
+            text-transform: uppercase;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 15px;
+            text-decoration: none;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            border: 3px solid #3d2b1f;
+        }
+
+        /* "Turn Back" - The Safe Option */
+        .btn-retreat {
+            background-color: #3d2b1f;
+            color: #e5d3b3;
+        }
+
+        .btn-retreat:hover {
+            background-color: #5c4033;
+            transform: scale(1.05);
+        }
+
+        /* "Proceed" - The Pirate Option */
+        .btn-enter {
+            background-color: transparent;
+            color: #3d2b1f;
+        }
+
+        .btn-enter:hover {
+            background-color: #d4c1a1;
+            transform: scale(1.05);
+        }
+
+        .footer-note {
+            font-size: 12px;
+            margin-top: 20px;
+            color: #3d2b1f;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster">
+        <h1 class="header">WANTED</h1>
+        
+        <div class="jolly-roger">☠️</div>
+        
+        <div class="warning-text">
+            Dead or Alive<br>
+            <span style="font-size: 14px;">Extreme Danger Beyond This Point</span>
+        </div>
+
+        <p style="color: #3d2b1f; margin-bottom: 25px;">
+            Only those with the will of <b>"D"</b> should proceed. The Grand Line is no place for the weak.
+        </p>
+        
+        <div class="btn-container">
+            <a href="javascript:history.back()" class="btn btn-retreat">RETURN TO LOGUETOWN</a>
+            <a href="/grand-line" class="btn btn-enter">SET SAIL ANYWAY</a>
+        </div>
+
+        <div class="footer-note">© World Government - Marine Headquarters</div>
+    </div>
+
+</body>
+</html>
